@@ -63,8 +63,6 @@ public class PercolationVisualizer {
 
     public static void main(String[] args) {
         In in = new In(args[0]);      // input file
-        
-        System.out.println("gioia");
         int N = in.readInt();         // N-by-N percolation system
         // turn on animation mode
         StdDraw.show(0);
