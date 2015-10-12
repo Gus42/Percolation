@@ -5,7 +5,7 @@ public class Percolation {
   private int N;
   private WeightedQuickUnionUF ali;
 
-  // create N-by-N grid, with all sites blocked
+  // create a fake N-by-N grid, with only one dimension, with all sites blocked(false)
   public Percolation(int N) {
     this.N = N;
     int sites = N * N + 2;
@@ -25,15 +25,15 @@ public class Percolation {
       if(isOpen(i-1, j)) {
         ali.union(index,dimensionConverter(i-1, j));
       }
-    }else{
+    } else {
       ali.union(index, N*N);
     }
     if(i != N) {
       if(isOpen(i+1, j)) {
         ali.union(index,dimensionConverter(i+1, j));
       }
-    }else{
-      if(!percolates()) ali.union(index, N*N+1);
+    } else {
+      ali.union(index, N*N+1);
     }
     if(j != 1) {
       if(isOpen(i, j-1)) {
