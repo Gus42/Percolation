@@ -8,6 +8,9 @@ Percolation is an exercise in java. It use the class WeightedQuickUnionUF to dis
 - To run the application you need insall the algs4 library. Tou can find it here: http://algs4.cs.princeton.edu/code/
 
 
+Known Bugs:
+- The backwash. When the system percolate, all paths connected to the bottom seem to percolate.
+
 Author: Francesco Gusella
 
 contact: gus815@gmail.com
